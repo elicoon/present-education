@@ -1,0 +1,181 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1a1a2e; font-family: 'Nunito Sans', sans-serif; min-height: 100vh; }
+
+/* ── Phone frame (student app) ── */
+.phone-frame {
+  width: 390px;
+  height: 844px;
+  background: #000;
+  border-radius: 50px;
+  padding: 12px;
+  box-shadow: 0 0 0 2px #333, 0 20px 60px rgba(0,0,0,0.5);
+  position: relative;
+  margin: 0 auto;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+.phone-screen img.screen-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Browser frame (teacher dashboard) ── */
+.browser-frame {
+  width: 1200px;
+  background: #2d2d2d;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.browser-chrome {
+  background: #3c3c3c;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.browser-dot { width: 12px; height: 12px; border-radius: 50%; }
+.browser-dot.red { background: #ff5f57; }
+.browser-dot.yellow { background: #ffbd2e; }
+.browser-dot.green { background: #28c840; }
+.browser-url {
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+  color: #555;
+  flex: 1;
+  margin-left: 8px;
+}
+.browser-screen {
+  position: relative;
+  width: 100%;
+}
+.browser-screen img.screen-bg {
+  width: 100%;
+  display: block;
+}
+
+/* ── Clickable hotspots ── */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  /* Debug: uncomment to visualize hotspots */
+  /* background: rgba(255,100,100,0.3); border: 2px solid red; */
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.hotspot:hover { background: rgba(255,255,255,0.15); }
+
+/* ── Navigation bar ── */
+.nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 10px 24px;
+  display: flex;
+  gap: 16px;
+  z-index: 100;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.nav a:hover, .nav a.active { opacity: 1; }
+
+/* ── Screen wrapper ── */
+.screen-wrapper {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+  gap: 20px;
+}
+.screen-wrapper.active { display: flex; }
+
+.screen-label {
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* ── Entry page ── */
+.entry-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 32px;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+.entry-logo { font-size: 48px; font-weight: 800; letter-spacing: -2px; }
+.entry-subtitle { opacity: 0.6; font-size: 16px; max-width: 400px; line-height: 1.5; }
+.entry-cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+.entry-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 200px;
+  text-decoration: none;
+  color: #fff;
+}
+.entry-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+.entry-card-icon { font-size: 36px; margin-bottom: 12px; }
+.entry-card-title { font-size: 20px; font-weight: 700; }
+.entry-card-desc { font-size: 13px; opacity: 0.6; margin-top: 6px; }
+
+/* ── Quick nav buttons ── */
+.quick-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+}
+.quick-nav button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.quick-nav button:hover { background: rgba(255,255,255,0.2); }
+.quick-nav button.danger { background: rgba(255,100,100,0.2); }

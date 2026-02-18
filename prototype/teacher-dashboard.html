@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Present — Teacher Dashboard Demo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="screen-wrapper active" style="max-width:1300px; margin:0 auto;">
+    <p class="screen-label" id="dashboard-label">Teacher Dashboard — Login</p>
+
+    <div class="browser-frame">
+      <div class="browser-chrome">
+        <div class="browser-dot red"></div>
+        <div class="browser-dot yellow"></div>
+        <div class="browser-dot green"></div>
+        <div class="browser-url">app.presenteducation.org/dashboard</div>
+      </div>
+      <div class="browser-screen" id="dashboard-screen">
+        <img src="screens/dashboard/1.Login_unfilled.png"
+             style="width:100%;display:block;" id="dashboard-img"
+             alt="Teacher dashboard" />
+        <!-- Login button hotspot -->
+        <div class="hotspot" id="dashboard-hotspot"
+             style="top:58%;left:30%;width:40%;height:7%;"
+             onclick="loadDashboardScreen('idle')"
+             title="Log In"></div>
+      </div>
+    </div>
+
+    <!-- Quick-nav to key dashboard states -->
+    <div class="quick-nav" style="max-width:900px;">
+      <button onclick="loadDashboardScreen('login')">Login</button>
+      <button onclick="loadDashboardScreen('idle')">Dashboard (idle)</button>
+      <button onclick="loadDashboardScreen('start-active')">Start Class</button>
+      <button onclick="loadDashboardScreen('class-session')">Class in Session</button>
+      <button onclick="loadDashboardScreen('question-in-progress')">Question Live</button>
+      <button onclick="loadDashboardScreen('question-stats')">Question Results</button>
+      <button onclick="loadDashboardScreen('lc-question-list')">Learning Checks</button>
+      <button onclick="loadDashboardScreen('lc-results')">LC Results</button>
+      <button onclick="loadDashboardScreen('attendance')">Attendance</button>
+      <button onclick="loadDashboardScreen('schedule-weekly')">Schedule (weekly)</button>
+      <button onclick="loadDashboardScreen('schedule-monthly')">Schedule (monthly)</button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="student-app.html">Student App</a>
+    <a href="teacher-dashboard.html" class="active">Teacher Dashboard</a>
+  </nav>
+
+  <script>
+    // Map logical screen IDs to actual filenames
+    const DASHBOARD_SCREENS = {
+      'login':               { img: '1.Login_unfilled.png',                              label: 'Login' },
+      'idle':                { img: '2_dashboard_start_class_inactive.png',              label: 'Dashboard — No Class Active' },
+      'start-active':        { img: '3_dashboard_start_class_active.png',               label: 'Dashboard — Starting Class' },
+      'class-session':       { img: '4.dashboard_class_in_session.png',                 label: 'Dashboard — Class in Session' },
+      'all-locked':          { img: '5_dashboard_class_in_session_question_all_locked.png', label: 'Dashboard — All Phones Locked' },
+      'response-list':       { img: '6.dashboard_class_in_session_response_list.png',   label: 'Dashboard — Response List' },
+      'attendance':          { img: '1.Attendance_none_selected_delete_inactive.png',   label: 'Attendance' },
+      'question-in-progress':{ img: '9.dashboard_class_in_session_question_in_progress.png', label: 'Question — In Progress' },
+      'question-stats':      { img: '11.dashboard_class_in_session_question_stats.png', label: 'Question — Stats' },
+      'lc-question-list':    { img: '2.Learning_Check_course_question_list.png',        label: 'Learning Checks — Question List' },
+      'lc-results':          { img: '6.Learning_Check_results.png',                     label: 'Learning Check Results' },
+      'schedule-weekly':     { img: '1_Class_schedule_weekly_collapsed.png',            label: 'Schedule — Weekly' },
+      'schedule-monthly':    { img: '3_Class_schedule_monthly.png',                     label: 'Schedule — Monthly' },
+    };
+
+    function loadDashboardScreen(id) {
+      const screen = DASHBOARD_SCREENS[id];
+      if (!screen) return;
+
+      document.getElementById('dashboard-img').src = 'screens/dashboard/' + screen.img;
+      document.getElementById('dashboard-label').textContent = 'Teacher Dashboard — ' + screen.label;
+
+      // Hide the login hotspot after first navigation
+      const hotspot = document.getElementById('dashboard-hotspot');
+      if (hotspot) hotspot.style.display = 'none';
+
+      // Update URL
+      const url = new URL(window.location);
+      url.searchParams.set('screen', id);
+      history.replaceState(null, '', url);
+    }
+
+    // Initialize from URL param if present
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const screen = params.get('screen');
+      if (screen && DASHBOARD_SCREENS[screen]) {
+        loadDashboardScreen(screen);
+      }
+    });
+  </script>
+</body>
+</html>

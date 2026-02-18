@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Present — Student App Demo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="screen-wrapper active">
+    <p class="screen-label" id="screen-label">Splash Screen</p>
+
+    <div class="phone-frame">
+      <div class="phone-screen" id="phone-screen">
+        <!-- Populated by navigation.js -->
+      </div>
+    </div>
+
+    <!-- Quick-nav to key flows -->
+    <div class="quick-nav">
+      <button onclick="renderStudentScreen('splash')">← Splash</button>
+      <button onclick="renderStudentScreen('schedule')">Schedule</button>
+      <button onclick="renderStudentScreen('class-starting-50')">Attendance →</button>
+      <button onclick="renderStudentScreen('learning-check')">Learning Check →</button>
+      <button onclick="renderStudentScreen('temp-check')">Temp Check →</button>
+      <button onclick="renderStudentScreen('emergency')" class="danger">🚨 Emergency</button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="student-app.html" class="active">Student App</a>
+    <a href="teacher-dashboard.html">Teacher Dashboard</a>
+  </nav>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>
