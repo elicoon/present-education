@@ -30,7 +30,7 @@ We shut down in August 2019.
 
 ## The Pilot
 
-The most important thing I learned in Doug Siegel's classroom was that behavior change is the hardest thing to do.
+The most important thing I learned in the classroom was that behavior change is the hardest thing to do.
 
 We had built something that required everyone — students, teachers, parents, IT — to do something different. And that's a much harder ask than it sounds.
 
@@ -66,13 +66,13 @@ Public school districts don't make fast decisions. Our Lincoln High School contr
 
 The math never worked: nine-to-twelve month sales cycles, a small number of schools we could realistically target, and a limited runway. We burned most of our capital on development before we'd proven that schools would actually change their behavior to use the product.
 
-### 4. The Team We Had Wasn't the Team We Needed
+### 4. Our Team Lacked the Skills and Experience Required to be Successful
 
 I'll be direct about this: I didn't have the skills or experience to know what I needed to make this successful. I knew the problem. I believed in the solution. I didn't have the technical depth to evaluate what we were building, to know when something was "good enough for now" versus "this will break us at scale," or to push back effectively when the implementation fell short.
 
 Outsourcing development to a firm overseas made this harder. The work was professional. But milestone-based, timezone-separated development meant every change request added weeks. When something broke, we were debugging features we'd specified ten months earlier. We had a product that none of us fully understood or controlled.
 
-A startup accelerator would have helped. More importantly, having a technical co-founder who could walk into that classroom with me, debug something on the spot, and understand the gap between what we'd built and what we needed — that would have changed what we built.
+A startup accelerator would have helped. More importantly, having a founding team member who could walk into that classroom with me, debug something on the spot, and understand the gap between what we'd built and what we needed — that would have changed what we built.
 
 ---
 
@@ -80,7 +80,7 @@ A startup accelerator would have helped. More importantly, having a technical co
 
 1. **Get into an accelerator.** YC, Techstars, whatever was relevant. Not for the money — for the structure, the network, and the forcing function of people who've seen these failure modes before.
 
-2. **Build the team first, then the product.** A technical partner who co-owned the problem and could work alongside me in the classroom. Not a vendor.
+2. **Build the tech in house** We needed to own the E2E architecture of our software in order to troubleshoot it.
 
 3. **Start with the teacher who feels the pain deeply.** Not just one who's open to trying. Find the teacher who's losing their mind over phones every day and build the whole thing around their specific workflow. Get that one classroom working perfectly before thinking about the next one.
 
@@ -97,16 +97,6 @@ The market we were building for now exists.
 Apple launched Screen Time and Google launched Digital Wellbeing that same year we were running our pilot — the first acknowledgment from the OS companies that this was a real problem. Post-COVID, school device management went from optional to urgent. GoGuardian raised hundreds of millions. Bark for Schools scaled broadly. Several states passed legislation limiting phone use in schools. Yondr — the phone pouch company we were competing with — is now in thousands of schools.
 
 We were right about the problem. We just didn't have the resources or the timing to be the ones who solved it.
-
----
-
-## What It Was Worth
-
-I ran a real company. I filed incorporation papers, opened a business bank account, negotiated a contract with a school district, managed offshore developers across time zones, built a product that shipped to two app stores, and wrote a shutdown letter when the time came.
-
-More than any of that: I learned how to be independent and self-driven when there are no deadlines outside the ones you set for yourself. Nobody is going to tell you what to do or when to do it. You either build that capacity or you don't. Present built it.
-
-I'd do it again.
 
 ---
 
