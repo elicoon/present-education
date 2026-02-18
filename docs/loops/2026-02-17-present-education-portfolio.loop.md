@@ -21,10 +21,10 @@ AGENT CONTRACT:
 |-------|-------|
 | **Workflow Type** | `feature` |
 | **Status** | `in-progress` |
-| **Iteration** | `1` |
+| **Iteration** | `3` |
 | **Max Iterations** | `20` |
 | **Created** | 2026-02-17 |
-| **Last Updated** | 2026-02-17 22:00 |
+| **Last Updated** | 2026-02-17 23:20 |
 | **Owner** | Eli Coon |
 | **Project** | `/home/eli/projects/present` |
 
@@ -77,7 +77,7 @@ AGENT CONTRACT:
 ## Steps
 
 ### Step 1: Create GitHub Repo & Directory Structure
-**Status:** [CURRENT]
+**Status:** [DONE]
 
 **Purpose:** Create the public `present-education` repo, set up all directories, enable Git LFS for large assets, make first commit.
 
@@ -98,7 +98,9 @@ AGENT CONTRACT:
 
 **Actual Outputs:**
 ```
-[To be filled after execution]
+Repo: https://github.com/elicoon/present-education
+Commit: f650f47 — "chore: initialize repo with directory structure, plan, and loop doc"
+12 files committed (plan, loop doc, .gitkeep placeholders for all asset dirs)
 ```
 
 **Verification:** `gh repo view present-education --web` opens the repo successfully.
@@ -106,7 +108,7 @@ AGENT CONTRACT:
 ---
 
 ### Step 2: Extract & Copy Visual Assets
-**Status:** [NEXT]
+**Status:** [DONE]
 
 **Purpose:** Copy all design exports, screenshots, branding, and architecture diagrams from the source archive into the repo. This is a prerequisite for all doc writing and the prototype.
 
@@ -132,7 +134,17 @@ AGENT CONTRACT:
 
 **Actual Outputs:**
 ```
-[To be filled after execution]
+app-screens: 44 files
+ios: 5 files (Countdown Timer, IDGI, Learning Checks, Schedule View, Temp Check)
+android: 5 framed device mockups
+teacher-dashboard: 27 files
+branding: 9 files (logos, color palette, teacher illustration)
+architecture: 2 files (PresentGeneralApplicationFlow.png, PresentTechStack.png)
+pilot: 1 file (Present Overview for Teachers.jpg)
+wireframes: 3 files (state management diagrams)
+prototype/screens/app: 44 files (copy of app-screens)
+prototype/screens/dashboard: 27 files (copy of teacher-dashboard)
+Total repo size: 30MB — commit 93915ae
 ```
 
 **Verification:** `ls assets/screenshots/app-screens/ | wc -l` returns ~45.
@@ -140,7 +152,7 @@ AGENT CONTRACT:
 ---
 
 ### Step 3: Write Shutdown Letter Doc
-**Status:** [NEXT]
+**Status:** [CURRENT]
 
 **Purpose:** Commit the original August 2019 shutdown letter as `docs/shutdown-letter.md`.
 
