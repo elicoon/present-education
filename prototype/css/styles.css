@@ -5,7 +5,6 @@ body { background: #1a1a2e; font-family: 'Nunito Sans', sans-serif; min-height: 
 /* ── Phone frame (student app) ── */
 .phone-frame {
   width: 390px;
-  height: 844px;
   background: #000;
   border-radius: 50px;
   padding: 12px;
@@ -15,7 +14,6 @@ body { background: #1a1a2e; font-family: 'Nunito Sans', sans-serif; min-height: 
 }
 .phone-screen {
   width: 100%;
-  height: 100%;
   border-radius: 40px;
   overflow: hidden;
   position: relative;
@@ -23,8 +21,7 @@ body { background: #1a1a2e; font-family: 'Nunito Sans', sans-serif; min-height: 
 }
 .phone-screen img.screen-bg {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
