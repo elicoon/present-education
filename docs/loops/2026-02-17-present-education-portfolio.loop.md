@@ -21,10 +21,10 @@ AGENT CONTRACT:
 |-------|-------|
 | **Workflow Type** | `feature` |
 | **Status** | `in-progress` |
-| **Iteration** | `3` |
+| **Iteration** | `4` |
 | **Max Iterations** | `20` |
 | **Created** | 2026-02-17 |
-| **Last Updated** | 2026-02-17 23:20 |
+| **Last Updated** | 2026-02-18 |
 | **Owner** | Eli Coon |
 | **Project** | `/home/eli/projects/present` |
 
@@ -152,7 +152,7 @@ Total repo size: 30MB — commit 93915ae
 ---
 
 ### Step 3: Write Shutdown Letter Doc
-**Status:** [CURRENT]
+**Status:** [DONE]
 
 **Purpose:** Commit the original August 2019 shutdown letter as `docs/shutdown-letter.md`.
 
@@ -169,7 +169,8 @@ Total repo size: 30MB — commit 93915ae
 
 **Actual Outputs:**
 ```
-[To be filled after execution]
+docs/shutdown-letter.md committed — commit 36717b1
+Original text verbatim, personal email address removed.
 ```
 
 **Verification:** `gh browse` → navigate to `docs/shutdown-letter.md` — renders cleanly.
@@ -177,35 +178,44 @@ Total repo size: 30MB — commit 93915ae
 ---
 
 ### Step 4: Write the Retrospective
-**Status:** [NEXT]
+**Status:** [DONE]
 
-**Purpose:** Write the full retrospective scaffold in `docs/retrospective.md`. Eli personalizes before publishing.
+**Purpose:** Write the full retrospective in `docs/retrospective.md` in Eli's authentic voice, via live interview.
 
 **Inputs:**
-- Retrospective outline from `Present - Reference/Retrospective Article.docx`
-- All context from the 8 parallel agent reports (see Discoveries)
-- Full scaffold structure in plan Task 4
+- Eli's writing samples (founder meeting notes, shutdown letter, cold email, 6-month plan)
+- 6-question live interview with Eli
 
 **Actions:**
-- Read `Retrospective Article.docx` outline first
-- Write full ~2,000-word scaffold following the structure in the plan
-- Include `[PERSONALIZE]` markers for Eli to fill in
-- Commit with note that Eli should review before publishing
+- Read Eli's actual writing to calibrate voice
+- Interview Eli one question at a time (6 questions)
+- Write full retrospective from his answers — no placeholder markers
+- Commit
 
 **Expected Outputs:**
-- `docs/retrospective.md` — complete scaffold, ~2,000 words
+- `docs/retrospective.md` — ~113 lines, written in Eli's voice from live interview answers
 
 **Actual Outputs:**
 ```
-[To be filled after execution]
+docs/retrospective.md committed — commit 0de1696
+~1,500 words. Written from 6-question live interview.
+Key interview answers captured:
+  Q1: Origin = mock trial coaching, kids distracted even at voluntary extracurricular
+  Q2: Team = minimal (people in area with software knowledge)
+  Q3: Pilot = students came around after weeks; they weren't the adoption barrier
+  Q4: Breaking point = failure rate math (0.1% × 2000 students × 6 classes = 10 failures/day)
+      + technical implementation never confident + parent skepticism + K-12 budget cycles
+  Q5: Would do differently = stronger tech team they understood/controlled, startup accelerator,
+      honest self-assessment about not having skills/experience needed
+  Q6: What it gave = independence and self-direction when no external deadlines
 ```
 
-**Verification:** Document is readable end-to-end; `[PERSONALIZE]` sections clearly marked; no placeholder text left in non-marked sections.
+**Verification:** Document reads end-to-end in Eli's voice; no [PERSONALIZE] markers needed (all filled from interview).
 
 ---
 
 ### Step 5: Write the README
-**Status:** [NEXT]
+**Status:** [CURRENT]
 
 **Purpose:** Write the centerpiece `README.md` with full startup story, stats, screenshots, architecture, pilot facts, business model, team, and links to all docs.
 
@@ -426,12 +436,12 @@ Total repo size: 30MB — commit 93915ae
 
 ## Next Action
 
-**For Iteration 1:**
+**For Iteration 4:**
 
-1. **Read:** This loop document (especially Discoveries) + plan Task 1 in `/home/eli/projects/present/docs/plans/2026-02-17-present-portfolio-github-repo.md`
-2. **Execute:** Step 1 — Create GitHub repo, directory structure, Git LFS config, commit plan + loop files
-3. **Watch for:** `gh` CLI authentication issues; LFS install errors; whether to use `gh repo create` or `git init` first
-4. **Update:** Actual Outputs for Step 1; mark Step 1 [DONE], Step 2 [CURRENT]; increment Iteration to 2; update Last Updated timestamp
+1. **Read:** This loop document + plan Task 5 in `/home/eli/projects/present-education/docs/plans/2026-02-17-present-portfolio-github-repo.md`
+2. **Execute:** Step 5 — Write `README.md`. Content is fully specified in plan Task 5.
+3. **Watch for:** Image paths must exist — run the path verification script from the plan before committing. Check that `assets/pilot/Present Overview for Teachers.jpg` exists (hero image). Check iOS screenshot filenames match exactly.
+4. **Update:** Actual Outputs for Step 5; mark Step 5 [DONE], Step 6 [CURRENT]; increment Iteration to 5; update Last Updated timestamp
 
 ---
 
@@ -440,6 +450,10 @@ Total repo size: 30MB — commit 93915ae
 | Iteration | Timestamp | Step Executed | Outcome | Duration |
 |-----------|-----------|---------------|---------|----------|
 | 0 | 2026-02-17 22:00 | Setup/Planning | Loop document created, plan finalized | ~3h |
+| 1 | 2026-02-17 23:20 | Step 1 | Repo created, directory structure committed | ~1h |
+| 2 | 2026-02-17 23:40 | Step 2 | All assets copied (44 app screens, 27 dashboard, branding, etc.) | ~30m |
+| 3 | 2026-02-17 | Step 3 | Shutdown letter committed | ~15m |
+| 4 | 2026-02-18 | Step 4 | Retrospective written via live interview, committed | ~1h |
 
 ---
 
