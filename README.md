@@ -6,7 +6,7 @@
 <h1 align="center">Present Education</h1>
 <p align="center">
   <strong>EdTech startup · Portland, OR · 2017–2019</strong><br/>
-  <em>"Goodbye Fortnite. Hello learning."</em>
+  <em>"Take back the classroom."</em>
 </p>
 
 <p align="center">
