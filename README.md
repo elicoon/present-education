@@ -115,8 +115,6 @@ Teachers weren't failing. The tools were.
 | FlipD | Voluntary app | Non-circumventable lock |
 | iOS Screen Time | OS-level (launched same year) | Cross-platform, teacher-controlled |
 
-**Advisors:** 12, including Bill Kelly (founder, Learning.com), Eric Rosenfeld (Oregon Angel Fund), Pam Knowles (ex-PPS Board member), Jay Keuter (PPS Strategic Partnerships)
-
 ---
 
 ## The Team
