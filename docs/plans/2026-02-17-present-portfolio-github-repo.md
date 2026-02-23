@@ -2292,4 +2292,4 @@ Eli must personally review Tasks 4 and 5 before publishing — Claude writes the
 - [ ] No personal email addresses (except Eli's, if he chooses)
 - [ ] Pitch deck reviewed: no cap table with individual amounts
 - [ ] Teacher/student name fields in designs: check if any real names in mockups
-- [ ] Shutdown letter: original is clean (remove elicoon@gmail.com if desired)
+- [ ] Shutdown letter: original is clean
